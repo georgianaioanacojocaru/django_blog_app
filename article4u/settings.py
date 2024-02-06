@@ -3,6 +3,7 @@ import environ
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
+import dj_database_url
 
 env = environ.Env()
 environ.Env.read_env()
@@ -80,12 +81,12 @@ WSGI_APPLICATION = 'article4u.wsgi.application'
 #         'PORT': DATABASE_PORT
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# Database
+# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# dj_database_url will load the database from the environment variable DATABASE_URL, if it exists,
+# otherwise falling back to the default sqlite database.
+DATABASES = {"default": dj_database_url.config(default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")}
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 X_FRAME_OPTIONS = 'ALLOWALL'

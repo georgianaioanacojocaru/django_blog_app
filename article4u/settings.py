@@ -22,7 +22,7 @@ SECRET_KEY = 'rh)%83!&n!z%u-lurmxhhn3fd!t%6+1#*8!axw4l52v33_v5jx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS =  ['localhost', '127.0.0.1', os.environ.get('RENDER_HOSTNAME', '')]
 
 
 # Application definition

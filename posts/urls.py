@@ -14,8 +14,8 @@ urlpatterns = [
     path("technology/<int:num_posts>/", json_template.as_view(), name="json_technology"),
     path("sports/", template.as_view(), name="sports"),
     path("sports/<int:num_posts>/", json_template.as_view(), name="json_sports"),
-    path("poets/", template.as_view(), name="poets"),
-    path("poets/<int:num_posts>/", json_template.as_view(), name="json_poets"),
+    path("literature/", template.as_view(), name="literature"),
+    path("literature/<int:num_posts>/", json_template.as_view(), name="json_literature"),
 
     path("template-view/<int:post_id>/", views.template_view, name="template_view"),
     path('post/<int:post_id>/comment/', views.post_comment, name='post_comment'),
@@ -24,3 +24,6 @@ urlpatterns = [
     path("login/", views.user_login, name="login"),
     path("logout/", views.user_logout, name="logout"),
 ]
+
+
+

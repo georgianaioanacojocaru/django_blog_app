@@ -1,7 +1,7 @@
 Render deployment: 
 https://django-blog-app-ce50.onrender.com/
 
-Github: https://django-blog-app-ce50.onrender.com/
+Github: https://github.com/georgianaioanacojocaru/django_blog_app
 
 Framework project
 Most of the Django concepts that i learned, All the concepts have been used in this blog.

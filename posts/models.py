@@ -6,13 +6,13 @@ class Post(models.Model):
     RANDOM_FACTS = 'random_facts'
     TECHNOLOGY = 'technology'
     SPORTS = 'sports'
-    POETS = 'poets'
+    LITERATURE = 'literature'
 
     CATEGORY_CHOICES = [
         (RANDOM_FACTS, 'Random Facts'),
         (TECHNOLOGY, 'Technology'),
         (SPORTS, 'Sports'),
-        (POETS, 'Poets'),
+        (LITERATURE, 'Literature'),
     ]
 
     title = models.CharField(max_length=100)

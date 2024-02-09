@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                     ("random_facts", "Random Facts"),
                     ("technology", "Technology"),
                     ("sports", "Sports"),
-                    ("poets", "Poets"),
+                    ("literature", "Literature"),
                 ],
                 max_length=60,
             ),

@@ -83,7 +83,7 @@ def post_comment(request, post_id):
         post = get_object_or_404(Post, id=post_id)
         content = request.POST.get('content')
         Comment.objects.create(post=post, author=request.user, content=content)
-    return redirect("/template-view/6")
+    return redirect(f"/template-view/{post_id}/")
 
 
 def sign_up(request):
